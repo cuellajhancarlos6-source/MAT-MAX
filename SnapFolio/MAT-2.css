@@ -1,0 +1,185 @@
+CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fondo Negro Absoluto OLED */
+    background-color: #000000;
+    color: #ffffff;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+/* ENCABEZADO SUPERIOR */
+
+#heading {
+    height: 200px;
+    width: 100vmax;
+    background-color: #000000;
+    border-bottom: 1px solid #00f3ff;
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.2);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#heading h1 {
+    color: #00f3ff; /* Cian Neón */
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7), 0 0 20px rgba(0, 243, 255, 0.3);
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* CONTENEDOR PRINCIPAL DEL EJERCICIO */
+
+#content2 {
+    width: 700px;
+    height: 650px;
+    background-color: #050505;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 70px;
+    position: relative;
+    border: 1px solid #1c1c1c;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 0, 127, 0.15);
+}
+
+/* CAJA DE LA ECUACIÓN/TÍTULO */
+
+#title {
+    height: 100px;
+    width: 450px;
+    border-radius: 70px;
+    background-color: #000000;
+    border: 1px solid #ff007f; /* Magenta Neón */
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 125px; /* Centrado relativo a los 700px */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#title h1 {
+    color: #ff007f;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.8), 0 0 20px rgba(255, 0, 127, 0.4);
+}
+
+/* CONTENEDOR PADRE DE BOTONES Y OPCIONES */
+
+#options {
+    height: 380px;
+    width: 330px;
+    background-color: transparent;
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 185px; /* Centrado dentro de content2 */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Mantiene A, B, C en una sola fila horizontal */
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* BOTONES DE OPCIONES (A, B, C) */
+
+.A, .B, .C {
+    width: 85px ;
+    height: 85px ;
+    padding: 0 ;
+    margin: 0 ;
+    background-color: #000000 ;
+    border: 2px solid #ffe600 ; /* Amarillo Neón */
+    border-radius: 50% ;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(255, 230, 0, 0.4);
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 85px ; /* Fuerza tamaño fijo sin deformación */
+}
+
+.A h1, .B h1, .C h1 {
+    color: #ffe600 ;
+    margin: 0 ;
+    font-size: 28px;
+    text-shadow: 0 0 8px rgba(255, 230, 0, 0.7);
+}
+
+/* EFECTO HOVER */
+
+.A:hover, .B:hover, .C:hover {
+    background-color: #ffe600;
+    box-shadow: 0 0 20px #ffe600, 0 0 35px #ffe600;
+    transform: scale(1.08);
+}
+
+.A:hover h1, .B:hover h1, .C:hover h1 {
+    color: #000000;
+    text-shadow: none;
+}
+
+/* CONTENEDOR DE VALORES (RESPUESTAS) */
+
+#poss-ans {
+    height: 50px;
+    width: 330px;
+    background-color: transparent;
+    position: absolute;
+    top: 110px; /* Ubicado exactamente debajo de las esferas */
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.value-A, .value-B, .value-C {
+    width: 85px;
+    height: 50px;
+    background-color: #000000;
+    border: 1px solid #222222;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 85px;
+}
+
+.value-A h1, .value-B h1, .value-C h1 {
+    color: #00f3ff;
+    font-size: 22px;
+    margin: 0;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+}
+
+/* TEMPORIZADOR */
+
+#Timer {
+    height: 80px;
+    width: 330px;
+    background-color: transparent;
+    position: absolute;
+    top: 190px;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Timer h1 {
+    color: #00ff66; /* Verde Lima Neón */
+    font-size: 22px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.7), 0 0 20px rgba(0, 255, 102, 0.3);
+}
